@@ -12,6 +12,8 @@ To do:
 - Build so that the user can choose their desired output units instead of only handling conversion to seconds
     - Import a dictionary of all of the base units so that I don't have to define each unit conversion as a variable?
 """
+import sys
+
 seconds = 1
 minutes = 60 * seconds
 hours = 60 * minutes
@@ -37,7 +39,8 @@ def validate_user_input_amount():
         elif user_input_amount == 0:
             print("Invalid input, cannot be 0")
     else:
-        print("Invalid input, must be be integer")
+        sys.exit(print("Invalid input, must be be integer"))
+        
 
 
 validate_user_input_amount()
