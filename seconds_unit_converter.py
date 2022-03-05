@@ -30,10 +30,12 @@ user_input_amount = input("Input amount \n")
 
 def validate_user_input_amount():
     if user_input_amount.isdigit():
-        global user_input_amount_int 
+        global user_input_amount_int
         user_input_amount_int = int(user_input_amount)
         if user_input_amount_int > 0:
             return(user_input_amount_int)
+        elif user_input_amount == 0:
+            print("Invalid input, cannot be 0")
     else:
         print("Invalid input, must be be integer")
 
