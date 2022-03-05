@@ -36,8 +36,8 @@ def validate_user_input_amount():
         user_input_amount_int = int(user_input_amount)
         if user_input_amount_int > 0:
             return(user_input_amount_int)
-        elif user_input_amount == 0:
-            print("Invalid input, cannot be 0")
+        elif user_input_amount_int == 0:
+            sys.exit(print("Invalid input, cannot be 0"))
     else:
         sys.exit(print("Invalid input, must be be integer"))
         
@@ -55,7 +55,7 @@ def validate_user_input_starting_units():
     if user_input_starting_unit in valid_starting_units:
         return(user_input_starting_unit)
     else:
-        print(f"Invalid input, must be be one of {valid_starting_units}")
+        sys.exit(print(f"Invalid input, must be be one of {valid_starting_units}"))
 
 
 validate_user_input_starting_units()
